@@ -7,40 +7,52 @@
     <script src="js/app.js"></script>
 </head>
 <body>
+<div id="rulesCont" class="invisible">
+    <div class="rulesImg"></div>
+    <button id="hide">Hide</button>
+</div>
 <div class="container">
     <h1>Rock, Paper, Scissors, Lizard, Spock!</h1>
-    <div class="panel">
-        <div class="btn" data-id="rock"></div>
-        <h2>Rock</h2>
+    <button id="showRules">Rules</button>
+    <div class="panels">
+        <div class="panel">
+            <div class="btn" data-id="rock"></div>
+            <h2>Rock</h2>
+        </div>
+        <div class="panel">
+            <div class="btn" data-id="paper"></div>
+            <h2>Paper</h2>
+        </div>
+        <div class="panel">
+            <div class="btn" data-id="scissors"></div>
+            <h2>Scissors</h2>
+        </div>
+        <div class="panel">
+            <div class="btn" data-id="lizard"></div>
+            <h2>Lizard</h2>
+        </div>
+        <div class="panel">
+            <div class="btn" data-id="spock"></div>
+            <h2>Spock</h2>
+        </div>
     </div>
-    <div class="panel">
-        <div class="btn" data-id="paper"></div>
-        <h2>Paper</h2>
-    </div>
-    <div class="panel">
-        <div class="btn" data-id="scissors"></div>
-        <h2>Scissors</h2>
-    </div>
-    <div class="panel">
-        <div class="btn" data-id="lizard"></div>
-        <h2>Lizard</h2>
-    </div>
-    <div class="panel">
-        <div class="btn" data-id="spock"></div>
-        <h2>Spock</h2>
+    <div class="points">
+        <h2>Your points: <span id="pPoints">0</span> </h2>
+        <h2>Computer points: <span id="cPoints">0</span></h2>
     </div>
     <div class="table">
+
         <div>
             <div><h2>Player</h2></div>
             <div id="p1Choice"></div>
             <h2 id="choiceTxtP"></h2>
-            <h2><span id="pPoints">0</span> points</h2>
+
         </div>
         <div>
             <h2>Computer</h2>
             <div id="p2Choice"></div>
             <h2 id="choiceTxtCom"></h2>
-            <h2><span id="cPoints">0</span> points</h2>
+
         </div>
         <h1 id="winner"></h1>
     </div>

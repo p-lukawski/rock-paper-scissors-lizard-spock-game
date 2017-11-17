@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     var arr = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
-    var imgArr = ['./images/rock.png', './images/paper.png', './images/scissors.png', './images/lizard.png', './images/spock.png']
-    var choiceInput = document.getElementById('choice');
-    var beginBtn = document.getElementById('begin');
+    var imgArr = ['./images/rock.png', './images/paper.png', './images/scissors.png', './images/lizard.png', './images/spock.png'];
+    var showRules = document.getElementById('showRules');
+    var rulesContainer = document.getElementById('rulesCont');
+    var hide = document.getElementById('hide');
     var p1Choiceimg = document.getElementById('p1Choice');
     var p2Choiceimg = document.getElementById('p2Choice');
     var pChoiceTxt = document.getElementById('choiceTxtP');
@@ -131,6 +132,16 @@ document.addEventListener('DOMContentLoaded', function () {
     for(var i=0; i<buttons.length; i++){
         buttons[i].addEventListener('click', game);
     }
+
+    showRules.addEventListener('click', function () {
+        rulesContainer.classList.remove('invisible');
+        rulesContainer.classList.add('fullScreen');
+    })
+
+    hide.addEventListener('click', function () {
+        rulesContainer.classList.remove('fullScreen');
+        rulesContainer.classList.add('invisible');
+    })
 
 });
 
