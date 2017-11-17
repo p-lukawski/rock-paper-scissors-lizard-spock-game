@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var pChoice = '';
     var comChoice = '';
     var buttons = document.querySelectorAll('.btn');
+    var reset = document.getElementById('reset');
 
     for(var i=0; i<buttons.length; i++){
         buttons[i].style.background = 'url' + '(' + imgArr[i] + ') no-repeat center/cover';
@@ -141,6 +142,17 @@ document.addEventListener('DOMContentLoaded', function () {
     hide.addEventListener('click', function () {
         rulesContainer.classList.remove('fullScreen');
         rulesContainer.classList.add('invisible');
+    })
+
+    reset.addEventListener('click', function () {
+        pChoice = '';
+        comChoice = '';
+        playerPts.innerText = 0;
+        computerPts.innerText = 0;
+        p1Choiceimg.style.background = '';
+        p2Choiceimg.style.background = '';
+        pChoiceTxt.innerText = '';
+        cChoiceTxt.innerText = '';
     })
 
 });
