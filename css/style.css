@@ -1,9 +1,18 @@
 .container{
     display: block;
     width: 600px;
-    height: 600px;
+    height: 800px;
     margin: 0 auto;
     border: solid black 1px;
+}
+
+.panel{
+    display: inline-block;
+}
+
+.btn{
+    width: 100px;
+    height: 100px;
 }
 
 

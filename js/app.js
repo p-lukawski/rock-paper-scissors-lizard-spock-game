@@ -15,17 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var computerPts = document.getElementById('cPoints');
     var pChoice = '';
     var comChoice = '';
+    var buttons = document.querySelectorAll('.btn');
 
-
-    function playerChoice () {
-        var indexOf = arr.indexOf(choiceInput.value);
-        if(indexOf ==0 || indexOf > 0){
-            pChoice = choiceInput.value;
-            return pChoice;
-        }else {
-           return alert("Błędne dane");
-        }
+    for(var i=0; i<buttons.length; i++){
+        buttons[i].style.background = 'url' + '(' + imgArr[i] + ') no-repeat center/cover';
     }
+
+
+
 
     function computerChoice() {
         comChoice = arr[Math.floor(Math.random() * arr.length)];
@@ -33,9 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function game () {
         var winnerVal = '';
-        playerChoice();
+        pChoice = this.dataset.id;
         computerChoice();
-        if(pChoice.length !== 0) {
             var indexOfP = arr.indexOf(pChoice);
             var indexOfC = arr.indexOf(comChoice);
             p1Choiceimg.style.background = 'url' + '(' + imgArr[indexOfP] + ') no-repeat center/cover';
@@ -124,17 +120,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
 
-        }
 
         winner.innerText = winnerVal + ' ';
-        choiceInput.value = '';
         pChoice = '';
         comChoice = '';
 
 
     }
 
-    beginBtn.addEventListener('click', game);
+    for(var i=0; i<buttons.length; i++){
+        buttons[i].addEventListener('click', game);
+    }
 
 });
 
