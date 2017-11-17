@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
         p2Choiceimg.style.background = '';
         pChoiceTxt.innerText = '';
         cChoiceTxt.innerText = '';
+        winner.innerText = '';
     })
 
 });
