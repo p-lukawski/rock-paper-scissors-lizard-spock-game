@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var beginBtn = document.getElementById('begin');
     var p1Choiceimg = document.getElementById('p1Choice');
     var p2Choiceimg = document.getElementById('p2Choice');
+    var pChoiceTxt = document.getElementById('choiceTxtP');
+    var cChoiceTxt = document.getElementById('choiceTxtCom');
     var winner = document.getElementById('winner');
+    var playerPts = document.getElementById('pPoints');
+    var computerPts = document.getElementById('cPoints');
     var pChoice = '';
     var comChoice = '';
 
@@ -36,65 +40,87 @@ document.addEventListener('DOMContentLoaded', function () {
             var indexOfC = arr.indexOf(comChoice);
             p1Choiceimg.style.background = 'url' + '(' + imgArr[indexOfP] + ') no-repeat center/cover';
             p2Choiceimg.style.background = 'url' + '(' + imgArr[indexOfC] + ') no-repeat center/cover';
+            pChoiceTxt.innerText = pChoice;
+            cChoiceTxt.innerText = comChoice;
             if (pChoice == 'rock') {
                 if (comChoice == 'rock') {
-                    winnerVal = 'Tie! No one';
+                    winnerVal = 'Tie! No one wins!';
                 } else if (comChoice == 'paper') {
-                    winnerVal = 'Computer';
+                    winnerVal = 'Computer win!';
+                    computerPts.innerText ++
                 } else if (comChoice == 'scissors') {
-                    winnerVal = "Player";
+                    winnerVal = "You win!";
+                    playerPts.innerText ++
                 } else if (comChoice == 'lizard') {
-                    winnerVal = 'Player';
+                    winnerVal = 'You win!';
+                    playerPts.innerText ++
                 } else if (comChoice == 'spock') {
-                    winnerVal = "Computer";
+                    winnerVal = "Computer win!";
+                    computerPts.innerText ++
                 }
             } else if (pChoice == 'paper') {
                 if (comChoice == 'rock') {
-                    winnerVal = 'Player';
+                    winnerVal = 'You win!';
+                    playerPts.innerText ++
                 } else if (comChoice == 'paper') {
-                    winnerVal = 'Tie! No one';
+                    winnerVal = 'Tie! No one wins!';
                 } else if (comChoice == 'scissors') {
-                    winnerVal = "Computer";
+                    winnerVal = "Computer win!";
+                    computerPts.innerText ++
                 } else if (comChoice == 'lizard') {
-                    winnerVal = 'Computer';
+                    winnerVal = 'Computer win!';
+                    computerPts.innerText ++
                 } else if (comChoice == 'spock') {
-                    winnerVal = "Player";
+                    winnerVal = "You win!";
+                    playerPts.innerText ++
                 }
             } else if (pChoice == 'scissors') {
                 if (comChoice == 'rock') {
-                    winnerVal = 'Computer';
+                    winnerVal = 'Computer win!';
+                    computerPts.innerText ++
                 } else if (comChoice == 'paper') {
-                    winnerVal = 'Player';
+                    winnerVal = 'You win!';
+                    playerPts.innerText ++
                 } else if (comChoice == 'scissors') {
-                    winnerVal = "Tie! No one";
+                    winnerVal = "Tie! No one wins";
                 } else if (comChoice == 'lizard') {
-                    winnerVal = 'Player';
+                    winnerVal = 'You win!';
+                    playerPts.innerText ++
                 } else if (comChoice == 'spock') {
-                    winnerVal = "Computer";
+                    winnerVal = "Computer win!";
+                    computerPts.innerText ++
                 }
             } else if (pChoice == 'lizard') {
                 if (comChoice == 'rock') {
-                    winnerVal = 'Computer';
+                    winnerVal = 'Computer win!';
+                    computerPts.innerText ++
                 } else if (comChoice == 'paper') {
-                    winnerVal = 'Player';
+                    winnerVal = 'You win!';
+                    playerPts.innerText ++
                 } else if (comChoice == 'scissors') {
-                    winnerVal = "Computer";
+                    winnerVal = "Computer win!";
+                    computerPts.innerText ++
                 } else if (comChoice == 'lizard') {
-                    winnerVal = 'Tie! No one';
+                    winnerVal = 'Tie! No one wins!';
                 } else if (comChoice == 'spock') {
-                    winnerVal = "Player";
+                    winnerVal = "You win!";
+                    playerPts.innerText ++
                 }
             } else if (pChoice == 'spock') {
                 if (comChoice == 'rock') {
-                    winnerVal = 'Player';
+                    winnerVal = 'You win!';
+                    playerPts.innerText ++
                 } else if (comChoice == 'paper') {
-                    winnerVal = 'Computer';
+                    winnerVal = 'Computer win!';
+                    computerPts.innerText ++
                 } else if (comChoice == 'scissors') {
-                    winnerVal = "Player";
+                    winnerVal = "You win!";
+                    playerPts.innerText ++
                 } else if (comChoice == 'lizard') {
-                    winnerVal = 'Computer';
+                    winnerVal = 'Computer win!';
+                    computerPts.innerText ++
                 } else if (comChoice == 'spock') {
-                    winnerVal = "Tie! No one";
+                    winnerVal = "Tie! No one wins!";
                 }
             }
 
@@ -102,6 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         winner.innerText = winnerVal + ' ';
         choiceInput.value = '';
+        pChoice = '';
+        comChoice = '';
+
 
     }
 

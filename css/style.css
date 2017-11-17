@@ -1,3 +1,21 @@
+.container{
+    display: block;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    border: solid black 1px;
+}
+
+
+.table > div {
+    display: inline-block;
+    border: solid black 1px;
+    width: 45%;
+    margin-left: 18px;
+    margin-top: 25%;
+}
+
+
 #p1Choice {
     width: 100px;
     height: 100px;

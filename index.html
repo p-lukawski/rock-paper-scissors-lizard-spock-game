@@ -7,19 +7,23 @@
     <script src="js/app.js"></script>
 </head>
 <body>
-<div>
+<div class="container">
     <input id="choice" type="text" placeholder="your choice">
     <button id="begin">Begin</button>
-    <div>
+    <div class="table">
         <div>
-            <h2>Player1</h2>
+            <div><h2>Player</h2></div>
             <div id="p1Choice"></div>
+            <h2 id="choiceTxtP"></h2>
+            <h2><span id="pPoints">0</span> points</h2>
         </div>
         <div>
             <h2>Computer</h2>
             <div id="p2Choice"></div>
+            <h2 id="choiceTxtCom"></h2>
+            <h2><span id="cPoints">0</span> points</h2>
         </div>
-        <h1><span id="winner"></span>wins!</h1>
+        <h1 id="winner"></h1>
     </div>
 </div>
 
